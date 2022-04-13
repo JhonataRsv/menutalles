@@ -1,0 +1,109 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened
+    fixedInViewport="true">
+    <img class="logo" src="assets/logo.svg">
+    <mat-nav-list class="nav-list" fxLayout="column" fxLayoutAlign="start center">
+        <a mat-list-item routerLink="" href="active"> 
+            <i class="material-icons">home</i>
+            <p>Inicio</p>
+        </a>
+        <a mat-list-item routerLink="">
+            <i class="material-icons">paid</i>
+            <p>Comissões</p> 
+        </a>
+        <a mat-list-item routerLink="">
+            <i class="material-icons">person</i>
+            <p>Cliente</p>
+        </a>
+        <a mat-list-item routerLink="">
+            <i class="material-icons">bar_chart</i>
+            <p>Monitor de Gestão</p>
+        </a>
+        <a mat-list-item routerLink="">
+            <i class="material-icons">swap_horiz</i>
+            <p>Monitor de Operações</p>
+        </a>
+    </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>
+<mat-drawer-container class="example-container menuBar" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-nav-list class="nav-list" fxLayout="column" fxLayoutAlign="start center">
+            <img class="logo" src="assets/logo.svg">
+            <a mat-list-item active routerLink=""> 
+                <i class="material-icons">home</i>
+                <p>Inicio</p>
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">paid</i>
+                <p>Comissões</p> 
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">person</i>
+                <p>Cliente</p>
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">bar_chart</i>
+                <p>Monitor de Gestão</p>
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">swap_horiz</i>
+                <p>Monitor de Operações</p>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            <i class="material-icons">menu</i>
+        </button>
+    </div>
+</mat-drawer-container>
+<mat-sidenav-container class="container menuMobile"> 
+    <mat-nav-list class="nav-list" fxLayout="row" fxLayoutAlign="space-around center" >
+        <a mat-list-item routerLink="">
+            <i class="material-icons">home</i>
+            <p>Inicio</p>
+        </a>
+        <a mat-list-item routerLink="">
+            <i class="material-icons">account_circle</i>
+            <p>Notificações</p> 
+        </a>
+        <a mat-list-item routerLink="">
+            <i class="material-icons">menu</i>
+            <p>Menu</p>
+        </a>
+    </mat-nav-list>
+</mat-sidenav-container>
+
+<mat-drawer-container class="example-container menuMobileB" autosize>
+    <mat-drawer #menu class="example-sidenav" mode="side" (click)="drawer.toggle()">
+        <img class="logo" src="assets/logo.svg">
+        <mat-nav-list class="nav-list" fxLayout="column" fxLayoutAlign="start center">
+            <a mat-list-item routerLink="">
+                <i class="material-icons">home</i>
+                <p>Inicio</p>
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">paid</i>
+                <p>Comissões</p> 
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">person</i>
+                <p>Cliente</p>
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">bar_chart</i>
+                <p>Monitor de Gestão</p>
+            </a>
+            <a mat-list-item routerLink="">
+                <i class="material-icons">swap_horiz</i>
+                <p>Monitor de Operações</p>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+</mat-drawer-container>
+<div class="example-sidenav-content menuButton">
+    <button mat-mini-fab color="primary" (click)="menu.toggle()" aria-label="Example icon button with a filter list icon">
+    <mat-icon>filter_list</mat-icon>
+    </button>
+</div>
